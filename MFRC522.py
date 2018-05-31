@@ -122,7 +122,7 @@ class MFRC522:
 	self.MFRC522_Init()
 	
   def switchPin(self, pin, decide):
-    if(decide==0):
+    if(decide==1):
 	return GPIO.output(pin, GPIO.HIGH)
     else:
 	return GPIO.output(pin, GPIO.LOW)
