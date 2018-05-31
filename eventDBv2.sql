@@ -10,18 +10,18 @@ DROP TABLE IF EXISTS `rooms`;
 
 CREATE table deps(
   depID INTEGER AUTO_INCREMENT PRIMARY KEY,
-  dep_code char(5),
-  description char(30)
+  dep_code varchar(10),
+  description varchar(30)
 );
 
 CREATE table rooms(
   roomID INTEGER AUTO_INCREMENT PRIMARY KEY,
-  description char(20)
+  description varchar(15)
 );
 
 CREATE table emps(
   empID INTEGER AUTO_INCREMENT PRIMARY KEY,
-  uid char(30),
+  uid varchar(50),
   depID INTEGER,
   CONSTRAINT FK_EmpDepID FOREIGN KEY(depID) REFERENCES deps(depID)
 );
@@ -29,7 +29,7 @@ CREATE table emps(
 CREATE table records(
   recordID INTEGER AUTO_INCREMENT PRIMARY KEY,
   roomID INTEGER,
-  uid char(30),
+  uid varchar(50),
   timecheck timestamp,
   depID INTEGER,
   flag bool,
@@ -40,8 +40,8 @@ CREATE table records(
 CREATE table availalbity(
   ID INTEGER AUTO_INCREMENT PRIMARY KEY,
   roomID INTEGER,
-  hca bool,
-  hsk bool,
+  HCA bool,
+  HK bool,
   timecheck timestamp,
   flag bool,
   roomStatus bool,
