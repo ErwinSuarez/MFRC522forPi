@@ -34,7 +34,7 @@ def getAuthentication():
         cursor.execute("SELECT auth FROM records ORDER BY recordID DESC LIMIT 1;")
         _temp = cursor.fetchone()
         # Get the first position from retrieved data
-        _isAuth = _temp[0]
+        _isAuth = _temp
         return _isAuth
         cursor.close()
         myconn.close()
