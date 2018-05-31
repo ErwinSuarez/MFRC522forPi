@@ -55,7 +55,7 @@ def recordToDB():
         uidasstring = ','.join(str(e) for e in uid)
         room_id = '3'
         # call recordToDb procedure to record room_id and uid
-        cursor.execute("CALL recordToDb (" +room_id +",'"+ uidasstring+"')")
+        cursor.execute("CALL recordToDb (%d, %s)" %  (room_id, uidasstring))
         cursor.close()
         myconn.close()
         print("Recorded to Local Database")
@@ -96,7 +96,7 @@ def syncDB():
                     masterDB.commit()
                 if data2 is not None:
                     for row in data2:
-                        syncAval = ("INSERT INTO availability(roomID,hca,hsk,timecheck,roomStatus)VALUES ("+str(row[1])+",'"+str(row[2])+"','"+str(row[3])+"','"+str(row[4])+"',"+str(row[6]$
+                        syncAval = ("INSERT INTO availability(roomID,hca,hsk,timecheck,roomStatus)VALUES ("+str(row[1])+",'"+str(row[2])+"','"+str(row[3])+"','"+str(row[4])+"',"+str(row[6])+");")
                         masterCur.execute(syncAval)
                         masterDB.commit()
                         masterCur.close()
