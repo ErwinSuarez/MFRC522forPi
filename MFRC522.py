@@ -111,10 +111,14 @@ class MFRC522:
 	spi.openSPI(device=dev,speed=spd)
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(22, GPIO.OUT)
-	GPIO.setup(11, GPIO.OUT)
-	GPIO.setup(13, GPIO.OUT)
-	GPIO.setup(15, GPIO.OUT)
+	GPIO.setup(12, GPIO.OUT)
+	GPIO.setup(16, GPIO.OUT)
+	GPIO.setup(36, GPIO.OUT)
+	
 	GPIO.output(self.NRSTPD, 1)
+	GPIO.output(12, GPIO.LOW)
+	GPIO.output(16, GPIO.LOW)
+	GPIO.output(36, GPIO.LOW)
 	self.MFRC522_Init()
 	
   def switchPin(self, pin, decide):
