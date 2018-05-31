@@ -181,7 +181,7 @@ while continue_reading:
         # Turn off all LED's
         time.sleep(0.3)
         MIFAREReader.myfunc(12, 0)
-           MIFAREReader.myfunc(16, 0)
+        MIFAREReader.myfunc(16, 0)
 
         # Print message
         print "Scan another card"     
