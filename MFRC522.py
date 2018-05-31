@@ -108,14 +108,14 @@ class MFRC522:
   serNum = []
   
   def __init__(self, dev='/dev/spidev0.0', spd=1000000):
-    spi.openSPI(device=dev,speed=spd)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(22, GPIO.OUT)
+	spi.openSPI(device=dev,speed=spd)
+	GPIO.setmode(GPIO.BOARD)
+	GPIO.setup(22, GPIO.OUT)
 	GPIO.setup(11, GPIO.OUT)
 	GPIO.setup(13, GPIO.OUT)
 	GPIO.setup(15, GPIO.OUT)
-    GPIO.output(self.NRSTPD, 1)
-    self.MFRC522_Init()
+	GPIO.output(self.NRSTPD, 1)
+	self.MFRC522_Init()
 	
   def switchPin(pin, decide):
     if(decide==0):
