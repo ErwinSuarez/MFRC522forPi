@@ -1,0 +1,8 @@
+USE eventDBv2;
+
+INSERT INTO emps(uid,depID) VALUES('68,165,116,167,50',1);
+INSERT INTO emps(uid,depID) VALUES('136,4,246,44,86',1);
+INSERT INTO emps(uid,depID) VALUES('136,5,55,34,152',1);
+INSERT INTO emps(uid,depID) VALUES('136,4,245,44,85',2);
+INSERT INTO emps(uid,depID) VALUES('136,4,247,44,87',2);
+INSERT INTO emps(uid,depID) VALUES('136,4,248,44,88',2);
