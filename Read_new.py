@@ -53,9 +53,9 @@ def recordToDB():
         cursor = myconn.cursor()
         # convert uid into string
         uidasstring = ','.join(str(e) for e in uid)
-        room_id = '3'
+        room = 'S201'
         # call recordToDb procedure to record room_id and uid
-        cursor.execute("CALL recordToDb (%d, %s)" %  (room_id, uidasstring))
+        cursor.execute("CALL recordToDb (%s, %s)" %  (room, uidasstring))
         cursor.close()
         myconn.close()
         print("Recorded to Local Database")
@@ -167,21 +167,21 @@ while continue_reading:
         # Check authentication
         if _isAuth:
             # Turn on Led1
-            MIFAREReader.myfunc(12, 1)
+            MIFAREReader.switchPin(12, 1)
             MIFAREReader.MFRC522_Read(8)
             MIFAREReader.MFRC522_StopCrypto1()
             time.sleep(0.3)
 
         else:
             # Turn on Led2
-            MIFAREReader.myfunc(16, 1)
+            MIFAREReader.switchPin(16, 1)
             print "Authentication error"
             time.sleep(0.7)
 
         # Turn off all LED's
         time.sleep(0.3)
-        MIFAREReader.myfunc(12, 0)
-        MIFAREReader.myfunc(16, 0)
+        MIFAREReader.switchPin(12, 0)
+        MIFAREReader.switchPin(16, 0)
 
         # Print message
         print "Scan another card"     
