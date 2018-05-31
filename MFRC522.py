@@ -119,9 +119,9 @@ class MFRC522:
 	
   def switchPin(pin, decide):
     if(decide==0):
-	  return GPIO.output(pin, GPIO.HIGH)
-	else:
-	  return GPIO.output(pin, GPIO.LOW)
+	return GPIO.output(pin, GPIO.HIGH)
+    else:
+	return GPIO.output(pin, GPIO.LOW)
   
   def MFRC522_Reset(self):
     self.Write_MFRC522(self.CommandReg, self.PCD_RESETPHASE)
