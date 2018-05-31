@@ -37,7 +37,7 @@ CREATE table records(
   CONSTRAINT FK_RecordRoomID FOREIGN KEY(roomID) REFERENCES rooms(roomID)
 );
 
-CREATE table availalbity(
+CREATE table availability(
   ID INTEGER AUTO_INCREMENT PRIMARY KEY,
   roomID INTEGER,
   HCA bool,
