@@ -117,7 +117,7 @@ class MFRC522:
 	GPIO.output(self.NRSTPD, 1)
 	self.MFRC522_Init()
 	
-  def switchPin(pin, decide):
+  def switchPin(self, pin, decide):
     if(decide==0):
 	return GPIO.output(pin, GPIO.HIGH)
     else:
