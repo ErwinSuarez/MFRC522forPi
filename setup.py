@@ -4,9 +4,9 @@ module1 = Extension('spi', sources = ['spi.c'])
 
 setup (
     name = 'SPI-Py',
-    author='Louis Thiery',
-    url='https://github.com/lthiery/SPI-Py',
-    download_url='https://github.com/lthiery/SPI-Py/archive/master.zip',
+    author='Erwin Suarez',
+    url='https://github.com/ErwinSuarez/MFRC522forPi',
+    download_url='https://github.com/ErwinSuarez/MFRC522forPi/archive/master.zip',
     version = '1.0',
     description = 'SPI-Py: Hardware SPI as a C Extension for Python',
     license='GPL-v2',
