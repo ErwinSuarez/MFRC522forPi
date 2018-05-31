@@ -55,7 +55,7 @@ def recordToDB():
         uidasstring = ','.join(str(e) for e in uid)
         room = 'S201'
         # call recordToDb procedure to record room_id and uid
-        cursor.execute("CALL recordToDb (%s, %s)" %  (room, uidasstring))
+        cursor.execute("CALL recordToDb ('"+room+"','"+uidasstring+"');")
         cursor.close()
         myconn.close()
         print("Recorded to Local Database")
