@@ -1,6 +1,6 @@
 CREATE SCHEMA IF NOT EXISTS `masterDBv2`;
 
-USE eventDBv2;
+USE masterDBv2;
 
 DROP TABLE IF EXISTS `availability`;
 DROP TABLE IF EXISTS `records`;
